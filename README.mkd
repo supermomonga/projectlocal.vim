@@ -10,5 +10,7 @@ If you are using NeoBundle.vim, you only need to write following lines to your .
 
     NeoBundle 'supermomonga/projectlocal.vim'
 
+# License
 
+NYSL
 

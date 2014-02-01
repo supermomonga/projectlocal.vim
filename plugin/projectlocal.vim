@@ -1,6 +1,7 @@
 " projectlocal.vim
 " Version: 0.0.1
 " Author : supermomonga (@supermomonga)
+" License : NYSL
 
 if exists('g:loaded_projectlocal')
   finish
