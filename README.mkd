@@ -1,0 +1,14 @@
+# projectlocal.vim
+
+It's sugoi benri plugin for auto filetype applying for whole files in your project.
+
+
+# Installation
+
+I recommend you to use NeoBundle.vim to manage Vim Plugins.
+If you are using NeoBundle.vim, you only need to write following lines to your .vimrc and just execute `:NeoBundleInstall`.
+
+    NeoBundle 'supermomonga/projectlocal.vim'
+
+
+
