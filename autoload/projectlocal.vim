@@ -3,8 +3,8 @@ set cpo&vim
 
 
 " Default settings
-let g:projectlocal#projectfile                 = get(g:, 'projectlocal#projectfile', 'Projectfile')
-let g:projectlocal#default_filetypes           = get(g:, 'projectlocal#default_filetypes', ['project'])
+let g:projectlocal#projectfile       = get(g:, 'projectlocal#projectfile', 'Projectfile')
+let g:projectlocal#default_filetypes = get(g:, 'projectlocal#default_filetypes', ['project'])
 
 
 function! projectlocal#apply()
@@ -13,12 +13,12 @@ function! projectlocal#apply()
     " Set filetypes
     let l:projectfile_filetypes = copy(g:projectlocal#default_filetypes)
     let l:projectfile_filetypes = extend(l:projectfile_filetypes, split(&filetype, '\.'))
-    for line in readfile(l:projectfile, '')
-      if line != ''
+    for l:line in readfile(l:projectfile, '')
+      if l:line != ''
         let l:projectfile_filetypes = extend(l:projectfile_filetypes, split(line, '\s*,\s*'))
       endif
     endfor
-    execute "setlocal ft=" . join(l:projectfile_filetypes, '.')
+    let &l:filetype = join(l:projectfile_filetypes, '.')
     " Set project root dir
     let l:rootdir = fnamemodify(l:projectfile, ':p:h')
     let b:projectlocal_root_dir = l:rootdir
