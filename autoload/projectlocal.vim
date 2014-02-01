@@ -12,10 +12,10 @@ function! projectlocal#apply()
   if l:projectfile != ''
     " Set filetypes
     let l:projectfile_filetypes = copy(g:projectlocal#default_filetypes)
-    let l:projectfile_filetypes = extend(l:projectfile_filetypes, split(&filetype, '\.'))
+    let l:projectfile_filetypes += split(&filetype, '\.')
     for l:line in readfile(l:projectfile, '')
       if l:line != ''
-        let l:projectfile_filetypes = extend(l:projectfile_filetypes, split(line, '\s*,\s*'))
+        let l:projectfile_filetypes += split(line, '\s*,\s*')
       endif
     endfor
     let &l:filetype = join(l:projectfile_filetypes, '.')
