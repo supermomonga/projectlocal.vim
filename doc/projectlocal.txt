@@ -26,7 +26,7 @@ To use *projectlocal* , you can get those following features.
 
 Some example usecases is here.
 - Add rails filetype to rails project's any files.
-- Use project root to list your projest's all files via other plugins like 
+- Use project root to list your project's all files via other plugins like 
   Unite.vim.
 
 Latest Version:
