@@ -13,7 +13,8 @@ set cpo&vim
 
 augroup plugin-projectlocal
   " autocmd FileType * nested call projectlocal#apply()
-  autocmd BufNewFile,BufReadPost * nested call projectlocal#apply()
+  " autocmd BufNewFile,BufReadPost * nested call projectlocal#apply()
+  autocmd FileType * call projectlocal#apply()
 augroup END
 
 let &cpo = s:save_cpo
