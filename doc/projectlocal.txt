@@ -1,4 +1,4 @@
-projectlocal.txt*	Speech notification in vimshell
+projectlocal.txt*	Project handling helper for vim
 
 Version: 0.0.1
 Author: supermomonga (@supermomonga)
