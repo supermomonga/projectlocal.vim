@@ -17,7 +17,7 @@ CHANGELOG			|projectlocal-changelog|
 INTRODUCTION					*projectlocal-introduction*
 
 *projectlocal* is the thin plugin to treat your projects well.
-To use *projectlocal* , you can get those following features.
+To use projectlocal , you can get those following features.
 
 - Add filetypes automatically when you open project's any file.
 - Set project root directory as buffer local variable when open your project's
