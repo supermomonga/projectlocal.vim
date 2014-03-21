@@ -13,6 +13,7 @@ function! projectlocal#apply()
     let l:projectfile = findfile(g:projectlocal#projectfile, '.;')
     if l:projectfile != ''
       " Set filetypes
+      echo 'projectfile found'
       let l:projectfile_filetypes = copy(g:projectlocal#default_filetypes)
       let l:projectfile_filetypes += split(&filetype, '\.')
       for l:line in readfile(l:projectfile, '')
