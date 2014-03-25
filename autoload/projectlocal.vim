@@ -25,8 +25,6 @@ function! projectlocal#apply()
       " Set project root dir
       let l:rootdir = fnamemodify(l:projectfile, ':p:h')
       let b:projectlocal_root_dir = l:rootdir
-    else
-      echom 'projectfile not found'
     endif
   endif
 endfunction
