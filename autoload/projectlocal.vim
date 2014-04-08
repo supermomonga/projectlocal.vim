@@ -20,7 +20,6 @@ function! projectlocal#apply()
           let l:projectfile_filetypes += split(line, '\s*,\s*')
         endif
       endfor
-      echom join(l:projectfile_filetypes, '.')
       let &filetype = join(l:projectfile_filetypes, '.')
       " Set project root dir
       let l:rootdir = fnamemodify(l:projectfile, ':p:h')
