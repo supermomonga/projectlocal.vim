@@ -11,13 +11,14 @@ function! projectlocal#apply()
   if !exists('b:projectlocal_applied')
     let b:projectlocal_applied = 1
     let l:projectfile = findfile(g:projectlocal#projectfile, '.;')
+    echo l:projectfile
     if l:projectfile != ''
       " Set filetypes
       let l:projectfile_filetypes = copy(g:projectlocal#default_filetypes)
       let l:projectfile_filetypes += split(&filetype, '\.')
       for l:line in readfile(l:projectfile, '')
         if l:line != ''
-          let l:projectfile_filetypes += split(line, '\s*,\s*')
+          let l:projectfile_filetypes += split(l:line, '\s*,\s*')
         endif
       endfor
       let &filetype = join(l:projectfile_filetypes, '.')
