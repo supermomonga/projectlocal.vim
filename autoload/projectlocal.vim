@@ -11,8 +11,8 @@ function! projectlocal#apply()
   if !exists('b:projectlocal_applied')
     let b:projectlocal_applied = 1
     let l:projectfile = findfile(g:projectlocal#projectfile, '.;')
-    echo l:projectfile
     if l:projectfile != ''
+      l:projectfile = getcwd() . '/' . l:projectfile
       " Set filetypes
       let l:projectfile_filetypes = copy(g:projectlocal#default_filetypes)
       let l:projectfile_filetypes += split(&filetype, '\.')
