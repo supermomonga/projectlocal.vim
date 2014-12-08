@@ -8,9 +8,8 @@ let g:projectlocal#default_filetypes = get(g:, 'projectlocal#default_filetypes',
 
 
 function! projectlocal#apply()
-  let l:projectfile = findfile(g:projectlocal#projectfile, '.;')
+  let l:projectfile = fnamemodify(findfile(g:projectlocal#projectfile, '.;'), ':p')
   if l:projectfile != ''
-    let l:projectfile = getcwd() . '/' . l:projectfile
     " Set filetypes
     let l:projectfile_filetypes = copy(g:projectlocal#default_filetypes)
     let l:projectfile_filetypes += split(&filetype, '\.')
